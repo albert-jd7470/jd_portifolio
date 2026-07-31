@@ -1544,3 +1544,222 @@ body:has(button:hover) .cursor-dot {
   .stat-divider { display: none; }
   .about-glass-card { width: 260px; height: 360px; }
 }
+
+/* ==========================================
+   STORE SHOWCASE — Skills Section
+   ========================================== */
+.stores-showcase {
+  margin-top: 3.5rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(124,58,237,0.07) 0%, rgba(236,72,153,0.05) 100%);
+  border: 1px solid rgba(124,58,237,0.2);
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.stores-showcase::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--purple), var(--pink), transparent);
+}
+
+.stores-showcase::after {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(124,58,237,0.15), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.stores-showcase-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.stores-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  background: rgba(6,182,212,0.1);
+  border: 1px solid rgba(6,182,212,0.3);
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--cyan);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.stores-live-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--cyan);
+  border-radius: 50%;
+  animation: pulse-dot 2s ease infinite;
+}
+
+.stores-showcase-title {
+  font-family: var(--font-2);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.7rem;
+  letter-spacing: -0.5px;
+}
+
+.stores-showcase-desc {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.stores-cards-row {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.store-showcase-card {
+  flex: 1;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: var(--transition);
+}
+
+.store-showcase-card:hover { transform: translateY(-6px); }
+
+.play-card {
+  border: 1px solid rgba(100,220,100,0.2);
+}
+.play-card:hover {
+  border-color: rgba(100,220,100,0.4);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(100,220,100,0.1);
+}
+
+.apple-card {
+  border: 1px solid rgba(180,180,200,0.2);
+}
+.apple-card:hover {
+  border-color: rgba(180,180,200,0.4);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(180,180,200,0.08);
+}
+
+.store-showcase-card-glow {
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.play-card .store-showcase-card-glow  { background: radial-gradient(circle, rgba(100,220,100,0.12), transparent 70%); }
+.apple-card .store-showcase-card-glow { background: radial-gradient(circle, rgba(200,200,220,0.08), transparent 70%); }
+
+.store-showcase-icon {
+  width: 70px; height: 70px;
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 2;
+}
+.play-card .store-showcase-icon  { background: rgba(100,220,100,0.1); border: 1px solid rgba(100,220,100,0.2); color: #4ade80; }
+.apple-card .store-showcase-icon { background: rgba(200,200,220,0.08); border: 1px solid rgba(200,200,220,0.2); color: #c8c8dc; }
+
+.store-showcase-info {
+  display: flex; flex-direction: column; gap: 0.2rem;
+  position: relative; z-index: 2;
+}
+
+.store-showcase-sub {
+  font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.store-showcase-name {
+  font-family: var(--font-2);
+  font-size: 1.5rem; font-weight: 700;
+  letter-spacing: -0.5px; line-height: 1.1;
+}
+.play-card .store-showcase-name  { color: #4ade80; }
+.apple-card .store-showcase-name { color: #e2e8f0; }
+
+.store-showcase-platform { font-size: 0.8rem; color: var(--text-3); font-weight: 500; }
+
+.store-showcase-stats {
+  display: flex; gap: 1.2rem;
+  position: relative; z-index: 2;
+  padding: 0.8rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.store-stat { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--text-2); }
+.store-stat i { font-size: 1rem; }
+.play-card .store-stat i  { color: #4ade80; }
+.apple-card .store-stat i { color: #94a3b8; }
+
+.store-showcase-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 0.5rem; padding: 0.75rem 1.4rem;
+  font-size: 0.85rem; font-weight: 600;
+  border-radius: 50px; text-decoration: none;
+  transition: var(--transition);
+  position: relative; z-index: 2;
+  margin-top: auto;
+}
+
+.play-btn  { background: rgba(74,222,128,0.12); color: #4ade80; border: 1px solid rgba(74,222,128,0.3); }
+.play-btn:hover {
+  background: #4ade80; color: #000;
+  border-color: #4ade80;
+  box-shadow: 0 6px 20px rgba(74,222,128,0.4);
+  transform: translateY(-2px);
+}
+
+.apple-btn  { background: rgba(200,200,220,0.08); color: #e2e8f0; border: 1px solid rgba(200,200,220,0.2); }
+.apple-btn:hover {
+  background: rgba(200,200,220,0.15); color: #fff;
+  border-color: rgba(200,200,220,0.4);
+  box-shadow: 0 6px 20px rgba(200,200,220,0.15);
+  transform: translateY(-2px);
+}
+
+.stores-divider {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 0.8rem; padding: 0 0.5rem; flex-shrink: 0;
+}
+.stores-divider-line {
+  width: 1px; flex: 1;
+  background: linear-gradient(to bottom, transparent, var(--border), transparent);
+}
+.stores-divider span {
+  font-family: var(--font-2);
+  font-size: 1.2rem; font-weight: 700;
+  color: var(--text-3); padding: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .stores-cards-row { flex-direction: column; }
+  .stores-divider { flex-direction: row; padding: 0.5rem 0; }
+  .stores-divider-line {
+    height: 1px; width: auto; flex: 1;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+  }
+  .stores-showcase { padding: 1.5rem; }
+}
