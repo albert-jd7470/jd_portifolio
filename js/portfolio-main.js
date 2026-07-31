@@ -32,12 +32,12 @@
   animateCursor();
 
   /* ----------------------------------------------------------
-     PARTICLES CANVAS
+     PARTICLES CANVAS — Yellow Theme
   ---------------------------------------------------------- */
   const canvas = document.getElementById('particles-canvas');
   const ctx    = canvas.getContext('2d');
   let particles = [];
-  const PARTICLE_COUNT = 80;
+  const PARTICLE_COUNT = 60;
 
   function resize() {
     canvas.width  = window.innerWidth;
@@ -51,19 +51,19 @@
     reset() {
       this.x  = Math.random() * canvas.width;
       this.y  = Math.random() * canvas.height;
-      this.r  = Math.random() * 1.5 + 0.4;
+      this.r  = Math.random() * 2 + 0.5;
       this.vx = (Math.random() - 0.5) * 0.3;
       this.vy = (Math.random() - 0.5) * 0.3;
-      this.alpha = Math.random() * 0.5 + 0.1;
-      const hue = Math.random() > 0.5 ? 270 : 310;
-      this.color = `hsla(${hue}, 80%, 70%, ${this.alpha})`;
+      this.alpha = Math.random() * 0.4 + 0.05;
+      // Yellow/amber tones
+      const hue = 38 + Math.random() * 20;  // 38–58 deg = yellow-amber
+      const sat = 90 + Math.random() * 10;
+      const lit = 55 + Math.random() * 20;
+      this.color = `hsla(${hue}, ${sat}%, ${lit}%, ${this.alpha})`;
     }
     update() {
-      this.x += this.vx;
-      this.y += this.vy;
-      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
-        this.reset();
-      }
+      this.x += this.vx; this.y += this.vy;
+      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
     }
     draw() {
       ctx.beginPath();
@@ -73,9 +73,7 @@
     }
   }
 
-  for (let i = 0; i < PARTICLE_COUNT; i++) {
-    particles.push(new Particle());
-  }
+  for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
 
   function drawConnections() {
     for (let i = 0; i < particles.length; i++) {
@@ -87,7 +85,7 @@
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(124, 58, 237, ${0.15 * (1 - dist / 120)})`;
+          ctx.strokeStyle = `rgba(251, 191, 36, ${0.12 * (1 - dist / 120)})`;
           ctx.lineWidth = 0.6;
           ctx.stroke();
         }
