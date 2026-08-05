@@ -821,6 +821,7 @@ body {
 
   .contact-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
+}
 
   .footer-inner { flex-direction: column; text-align: center; }
 
@@ -842,3 +843,61 @@ body {
   .stat-divider { display: none; }
   .about-glass-card { width: 260px; height: 360px; }
 }
+
+/* ==========================================
+   LANGUAGE SWITCHER
+   ========================================== */
+.lang-switcher {
+  background: var(--yellow-light);
+  border: 1.5px solid var(--border-y2);
+  color: var(--yellow-dark);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23D97706%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+  padding-right: 2rem;
+}
+.lang-switcher:hover {
+  background-color: var(--yellow);
+  color: var(--text);
+  border-color: var(--yellow);
+}
+
+/* ==========================================
+   RTL SUPPORT
+   ========================================== */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+html[dir="rtl"] .nav-logo { margin-right: 0; margin-left: auto; }
+html[dir="rtl"] .hero-desc { margin-left: 0; margin-right: auto; text-align: right; }
+html[dir="rtl"] .stat-divider { margin: 0 1.5rem; }
+html[dir="rtl"] .floating-card { flex-direction: row-reverse; }
+html[dir="rtl"] .about-text { text-align: right; }
+html[dir="rtl"] .highlight i { margin-left: 1rem; margin-right: 0; }
+html[dir="rtl"] .timeline-item:nth-child(odd) { right: 0; padding-left: 3rem; padding-right: 1.5rem; text-align: left; }
+html[dir="rtl"] .timeline-item:nth-child(even) { right: 50%; padding-right: 3rem; padding-left: 1.5rem; text-align: right; }
+html[dir="rtl"] .timeline-dot { left: -8px; right: auto; }
+html[dir="rtl"] .timeline-item:nth-child(odd) .timeline-dot { left: -8px; right: auto; }
+html[dir="rtl"] .timeline-item:nth-child(even) .timeline-dot { right: -8px; left: auto; }
+html[dir="rtl"] .contact-info-item { gap: 1rem; }
+html[dir="rtl"] .social-row { gap: 0.8rem; justify-content: flex-start; }
+html[dir="rtl"] .stores-divider { transform: scaleX(-1); }
+html[dir="rtl"] .lang-switcher {
+  background-position: left 0.7rem top 50%;
+  padding-right: 1rem;
+  padding-left: 2rem;
+}
+html[dir="rtl"] .btn i { margin-right: 0.5rem; margin-left: 0; transform: scaleX(-1); }
+html[dir="rtl"] .project-view i { transform: scaleX(-1); }

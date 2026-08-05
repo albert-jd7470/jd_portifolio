@@ -35,16 +35,21 @@
         <span class="logo-bracket">&lt;</span>JD<span class="logo-bracket">/&gt;</span>
       </a>
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
-        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
-        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        <li><a href="#hero" class="nav-link active" data-section="hero" data-i18n="nav_home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about" data-i18n="nav_about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience" data-i18n="nav_experience">Experience</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
       <a href="assets/AlbertJDFlutterDeveloperResume.pdf" class="nav-cta" download>
-        <i class="uil uil-file-download"></i> Resume
+        <i class="uil uil-file-download"></i> <span data-i18n="nav_resume">Resume</span>
       </a>
+      <select id="lang-switcher" class="lang-switcher" aria-label="Select Language">
+        <option value="en">EN</option>
+        <option value="ar">AR</option>
+        <option value="hi">HI</option>
+      </select>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -57,52 +62,51 @@
       <div class="hero-content">
         <div class="hero-badge reveal-up">
           <span class="badge-dot"></span>
-          Available for Collaboration
+          <span data-i18n="hero_badge">Available for Collaboration</span>
         </div>
         <h1 class="hero-title reveal-up">
-          <span class="greeting">Hey, I'm</span>
+          <span class="greeting" data-i18n="hero_greeting">Hey, I\'m</span>
           <span class="name-wrap">
             <span class="name-text">Albert JD</span>
             <span class="name-underline"></span>
           </span>
         </h1>
         <div class="hero-role reveal-up">
-          <span class="role-prefix">I'm a&nbsp;</span>
+          <span class="role-prefix" data-i18n="hero_role_prefix">I\'m a&nbsp;</span>
           <div class="role-slider">
-            <span>Software Developer</span>
-            <span>Flutter Engineer</span>
-            <span>UI/UX Designer</span>
-            <span>Mobile App Dev</span>
+            <span data-i18n="role_1">Software Developer</span>
+            <span data-i18n="role_2">Flutter Engineer</span>
+            <span data-i18n="role_3">UI/UX Designer</span>
+            <span data-i18n="role_4">Mobile App Dev</span>
           </div>
         </div>
         <p class="hero-desc reveal-up">
-          Passionate Software Developer at <strong><a href="https://5sumat.com/" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--yellow-dark);">5SUMAT</a></strong>, crafting high-performance cross-platform
-          applications with elegant interfaces and scalable architecture.
+          <span data-i18n="hero_desc_1">Passionate Software Developer at</span> <strong><a href="https://5sumat.com/" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--yellow-dark);">5SUMAT</a></strong><span data-i18n="hero_desc_2">, crafting high-performance cross-platform applications with elegant interfaces and scalable architecture.</span>
         </p>
         <div class="hero-actions reveal-up">
           <a href="#projects" class="btn btn-primary">
-            <span>View My Work</span>
+            <span data-i18n="hero_btn_work">View My Work</span>
             <i class="uil uil-arrow-right"></i>
           </a>
           <a href="#contact" class="btn btn-ghost">
-            <span>Let's Talk</span>
+            <span data-i18n="hero_btn_talk">Let\'s Talk</span>
             <i class="uil uil-comment-lines"></i>
           </a>
         </div>
         <div class="hero-stats reveal-up">
           <div class="stat">
             <span class="stat-num" data-count="1">0</span><span class="stat-plus">+</span>
-            <span class="stat-label">Years at 5SUMAT</span>
+            <span class="stat-label" data-i18n="stat_years">Years at 5SUMAT</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
             <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
-            <span class="stat-label">Projects Built</span>
+            <span class="stat-label" data-i18n="stat_projects">Projects Built</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
             <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
-            <span class="stat-label">Technologies</span>
+            <span class="stat-label" data-i18n="stat_tech">Technologies</span>
           </div>
         </div>
       </div>
@@ -116,11 +120,11 @@
         </div>
         <div class="floating-card card-top">
           <i class="uil uil-flutter"></i>
-          <span>Flutter Dev</span>
+          <span data-i18n="card_flutter">Flutter Dev</span>
         </div>
         <div class="floating-card card-middle">
           <i class="uil uil-swatchbook"></i>
-          <span>UI/UX Designer</span>
+          <span data-i18n="role_3">UI/UX Designer</span>
         </div>
         <div class="floating-card card-bottom">
           <i class="uil uil-check-circle"></i>
@@ -130,7 +134,7 @@
     </div>
     <div class="scroll-indicator">
       <div class="scroll-line"></div>
-      <span>Scroll</span>
+      <span data-i18n="scroll">Scroll</span>
     </div>
   </section>
 
@@ -138,42 +142,38 @@
   <section class="section about-section" id="about">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">About Me</span>
-        <h2 class="section-title">Crafting Code,<br><span class="gradient-text">Shaping Experiences</span></h2>
+        <span class="section-tag" data-i18n="about_tag">About Me</span>
+        <h2 class="section-title"><span data-i18n="about_title_1">Crafting Code,</span><br><span class="gradient-text" data-i18n="about_title_2">Shaping Experiences</span></h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal-left">
-          <p>I'm <strong>Albert JD</strong>, a software developer currently working at <strong><a href="https://5sumat.com/" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--yellow-dark);">5SUMAT</a></strong>. I
-            specialize in building cross-platform mobile applications using Flutter and Dart, with strong foundations in
-            REST APIs, Firebase, and UI/UX design principles.</p>
-          <p>I hold a <strong>BSc in Computer Science</strong> from MG University and completed advanced Flutter
-            development training at SMEC Labs. My passion lies in delivering clean, performant, and visually stunning
-            applications.</p>
+          <p><span data-i18n="about_p1_1">I\'m</span> <strong>Albert JD</strong>, <span data-i18n="about_p1_2">a software developer currently working at</span> <strong><a href="https://5sumat.com/" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--yellow-dark);">5SUMAT</a></strong>. <span data-i18n="about_p1_3">I specialize in building cross-platform mobile applications using Flutter and Dart, with strong foundations in REST APIs, Firebase, and UI/UX design principles.</span></p>
+          <p><span data-i18n="about_p2">I hold a <strong>BSc in Computer Science</strong> from MG University and completed advanced Flutter development training at SMEC Labs. My passion lies in delivering clean, performant, and visually stunning applications.</span></p>
           <div class="about-highlights">
             <div class="highlight">
               <i class="uil uil-briefcase-alt"></i>
               <div>
-                <strong>Current Role</strong>
-                <span>Software Developer @ 5SUMAT</span>
+                <strong data-i18n="about_role">Current Role</strong>
+                <span data-i18n="about_role_val">Software Developer @ 5SUMAT</span>
               </div>
             </div>
             <div class="highlight">
               <i class="uil uil-graduation-cap"></i>
               <div>
-                <strong>Education</strong>
-                <span>BSc Computer Science, MG University</span>
+                <strong data-i18n="about_edu">Education</strong>
+                <span data-i18n="about_edu_val">BSc Computer Science, MG University</span>
               </div>
             </div>
             <div class="highlight">
               <i class="uil uil-map-marker"></i>
               <div>
-                <strong>Location</strong>
-                <span>Kerala, India</span>
+                <strong data-i18n="about_loc">Location</strong>
+                <span data-i18n="about_loc_val">Kerala, India</span>
               </div>
             </div>
           </div>
           <a href="assets/AlbertJDFlutterDeveloperResume.pdf" class="btn btn-primary" download>
-            <i class="uil uil-file-download-alt"></i> Download Resume
+            <i class="uil uil-file-download-alt"></i> <span data-i18n="btn_download">Download Resume</span>
           </a>
         </div>
         <div class="about-card-wrap reveal-right">
@@ -182,7 +182,7 @@
               <img src="images/maleDevelpoer.png" alt="Albert JD" class="about-img">
               <div class="about-card-info">
                 <span class="about-name">Albert JD</span>
-                <span class="about-role-tag">Software Developer</span>
+                <span class="about-role-tag" data-i18n="about_card_role">Software Developer</span>
               </div>
             </div>
           </div>
@@ -195,14 +195,14 @@
   <section class="section skills-section" id="skills">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">Expertise</span>
-        <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+        <span class="section-tag" data-i18n="skills_tag">Expertise</span>
+        <h2 class="section-title"><span data-i18n="skills_title_1">Skills &amp; </span><span class="gradient-text" data-i18n="skills_title_2">Technologies</span></h2>
       </div>
       <div class="skills-grid">
         <div class="skill-card reveal-up" style="--delay: 0s">
           <div class="skill-icon"><i class="uil uil-flutter"></i></div>
-          <h3>Flutter & Dart</h3>
-          <p>Cross-platform mobile development with beautiful, natively compiled apps.</p>
+          <h3 data-i18n="skill1_title">Flutter & Dart</h3>
+          <p data-i18n="skill1_desc">Cross-platform mobile development with beautiful, natively compiled apps.</p>
           <div class="skill-bar">
             <div class="skill-fill" data-width="90"></div>
           </div>
@@ -210,8 +210,8 @@
         </div>
         <div class="skill-card reveal-up" style="--delay: 0.1s">
           <div class="skill-icon"><i class="uil uil-fire"></i></div>
-          <h3>Firebase</h3>
-          <p>Real-time database, authentication, cloud functions, and hosting.</p>
+          <h3 data-i18n="skill2_title">Firebase</h3>
+          <p data-i18n="skill2_desc">Real-time database, authentication, cloud functions, and hosting.</p>
           <div class="skill-bar">
             <div class="skill-fill" data-width="85"></div>
           </div>
@@ -219,8 +219,8 @@
         </div>
         <div class="skill-card reveal-up" style="--delay: 0.2s">
           <div class="skill-icon"><i class="uil uil-brackets-curly"></i></div>
-          <h3>REST APIs</h3>
-          <p>Integration of third-party APIs, payment gateways, and custom backends.</p>
+          <h3 data-i18n="skill3_title">REST APIs</h3>
+          <p data-i18n="skill3_desc">Integration of third-party APIs, payment gateways, and custom backends.</p>
           <div class="skill-bar">
             <div class="skill-fill" data-width="88"></div>
           </div>
@@ -228,8 +228,8 @@
         </div>
         <div class="skill-card reveal-up" style="--delay: 0.3s">
           <div class="skill-icon"><i class="uil uil-swatchbook"></i></div>
-          <h3>UI/UX Design</h3>
-          <p>Designing elegant, user-centric interfaces with modern design systems.</p>
+          <h3 data-i18n="skill4_title">UI/UX Design</h3>
+          <p data-i18n="skill4_desc">Designing elegant, user-centric interfaces with modern design systems.</p>
           <div class="skill-bar">
             <div class="skill-fill" data-width="82"></div>
           </div>
@@ -237,8 +237,8 @@
         </div>
         <div class="skill-card reveal-up" style="--delay: 0.4s">
           <div class="skill-icon"><i class="uil uil-database"></i></div>
-          <h3>State Management</h3>
-          <p>BLoC, Provider, GetX patterns for scalable app architecture.</p>
+          <h3 data-i18n="skill5_title">State Management</h3>
+          <p data-i18n="skill5_desc">BLoC, Provider, GetX patterns for scalable app architecture.</p>
           <div class="skill-bar">
             <div class="skill-fill" data-width="80"></div>
           </div>
@@ -246,8 +246,8 @@
         </div>
         <div class="skill-card reveal-up" style="--delay: 0.5s">
           <div class="skill-icon"><i class="uil uil-code-branch"></i></div>
-          <h3>Git & DevOps</h3>
-          <p>Version control, CI/CD pipelines, and collaborative development workflows.</p>
+          <h3 data-i18n="skill6_title">Git & DevOps</h3>
+          <p data-i18n="skill6_desc">Version control, CI/CD pipelines, and collaborative development workflows.</p>
           <div class="skill-bar">
             <div class="skill-fill" data-width="78"></div>
           </div>
@@ -255,8 +255,8 @@
         </div>
         <div class="skill-card reveal-up" style="--delay: 0.6s">
           <div class="skill-icon"><i class="uil uil-pen"></i></div>
-          <h3>Figma to Flutter</h3>
-          <p>Pixel-perfect replication of Figma UI designs into responsive cross-platform apps.</p>
+          <h3 data-i18n="skill7_title">Figma to Flutter</h3>
+          <p data-i18n="skill7_desc">Pixel-perfect replication of Figma UI designs into responsive cross-platform apps.</p>
           <div class="skill-bar">
             <div class="skill-fill" data-width="95"></div>
           </div>
@@ -269,12 +269,10 @@
         <div class="stores-showcase-header">
           <span class="stores-live-pill">
             <span class="stores-live-dot"></span>
-            Live on Stores
+            <span data-i18n="stores_live">Live on Stores</span>
           </span>
-          <h3 class="stores-showcase-title">Apps Available on <span class="gradient-text">Google Play &amp; App
-              Store</span></h3>
-          <p class="stores-showcase-desc">My Flutter applications are shipped and available for download on both major
-            platforms, reaching users on Android and iOS worldwide.</p>
+          <h3 class="stores-showcase-title"><span data-i18n="stores_title_1">Apps Available on </span><span class="gradient-text" data-i18n="stores_title_2">Google Play &amp; App Store</span></h3>
+          <p class="stores-showcase-desc"><span data-i18n="stores_desc">My Flutter applications are shipped and available for download on both major platforms, reaching users on Android and iOS worldwide.</span></p>
         </div>
         <div class="stores-cards-row">
           <!-- Google Play Card -->
@@ -287,7 +285,7 @@
               </svg>
             </div>
             <div class="store-showcase-info">
-              <span class="store-showcase-sub">GET IT ON</span>
+              <span class="store-showcase-sub"><span data-i18n="store_get">GET IT ON</span></span>
               <span class="store-showcase-name">Google Play</span>
               <span class="store-showcase-platform">Android</span>
             </div>
@@ -303,7 +301,7 @@
             </div>
             <a href="https://play.google.com/store" target="_blank" id="playstore-skill-btn"
               class="store-showcase-btn play-btn">
-              View on Play Store <i class="uil uil-external-link-alt"></i>
+              <span data-i18n="btn_playstore">View on Play Store</span> <i class="uil uil-external-link-alt"></i>
             </a>
           </div>
 
@@ -324,7 +322,7 @@
               </svg>
             </div>
             <div class="store-showcase-info">
-              <span class="store-showcase-sub">DOWNLOAD ON THE</span>
+              <span class="store-showcase-sub"><span data-i18n="store_download">DOWNLOAD ON THE</span></span>
               <span class="store-showcase-name">App Store</span>
               <span class="store-showcase-platform">iOS</span>
             </div>
@@ -340,7 +338,7 @@
             </div>
             <a href="https://apps.apple.com" target="_blank" id="appstore-skill-btn"
               class="store-showcase-btn apple-btn">
-              View on App Store <i class="uil uil-external-link-alt"></i>
+              <span data-i18n="btn_appstore">View on App Store</span> <i class="uil uil-external-link-alt"></i>
             </a>
           </div>
         </div>
@@ -353,8 +351,8 @@
   <section class="section projects-section" id="projects">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">Portfolio</span>
-        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <span class="section-tag" data-i18n="projects_tag">Portfolio</span>
+        <h2 class="section-title"><span data-i18n="projects_title_1">Featured </span><span class="gradient-text" data-i18n="projects_title_2">Projects</span></h2>
       </div>
       <div class="projects-grid">
 
@@ -362,7 +360,7 @@
           <div class="project-img-wrap">
             <img src="images/project/project-image02.png" alt="Project 1" class="project-img">
             <div class="project-overlay">
-              <span class="project-view">View Project <i class="uil uil-arrow-right"></i></span>
+              <span class="project-view"><span data-i18n="btn_view_project">View Project</span> <i class="uil uil-arrow-right"></i></span>
             </div>
           </div>
           <div class="project-body">
@@ -371,8 +369,7 @@
               <span class="tag">Firebase</span>
             </div>
             <h3 class="project-title">E-Commerce Mobile App</h3>
-            <p class="project-desc">Full-featured shopping app with cart, payments, and real-time product management.
-            </p>
+            <p class="project-desc" data-i18n="proj1_desc">Full-featured shopping app with cart, payments, and real-time product management.</p>
           </div>
         </div>
 
@@ -380,7 +377,7 @@
           <div class="project-img-wrap">
             <img src="images/project/project-image03.png" alt="Project 2" class="project-img">
             <div class="project-overlay">
-              <span class="project-view">View Project <i class="uil uil-arrow-right"></i></span>
+              <span class="project-view"><span data-i18n="btn_view_project">View Project</span> <i class="uil uil-arrow-right"></i></span>
             </div>
           </div>
           <div class="project-body">
@@ -389,7 +386,7 @@
               <span class="tag">REST API</span>
             </div>
             <h3 class="project-title">Delivery &amp; Logistics App</h3>
-            <p class="project-desc">Real-time tracking, order management, and driver coordination platform.</p>
+            <p class="project-desc" data-i18n="proj2_desc">Real-time tracking, order management, and driver coordination platform.</p>
           </div>
         </div>
 
@@ -397,7 +394,7 @@
           <div class="project-img-wrap">
             <img src="images/project/project-image04.png" alt="Project 3" class="project-img">
             <div class="project-overlay">
-              <span class="project-view">View Project <i class="uil uil-arrow-right"></i></span>
+              <span class="project-view"><span data-i18n="btn_view_project">View Project</span> <i class="uil uil-arrow-right"></i></span>
             </div>
           </div>
           <div class="project-body">
@@ -406,7 +403,7 @@
               <span class="tag">UI/UX</span>
             </div>
             <h3 class="project-title">Wallet &amp; Payments UI</h3>
-            <p class="project-desc">Sleek digital wallet with coupon management and payment gateway integration.</p>
+            <p class="project-desc" data-i18n="proj3_desc">Sleek digital wallet with coupon management and payment gateway integration.</p>
           </div>
         </div>
 
@@ -414,7 +411,7 @@
           <div class="project-img-wrap">
             <img src="images/project/project-image05.png" alt="Project 4" class="project-img">
             <div class="project-overlay">
-              <span class="project-view">View Project <i class="uil uil-arrow-right"></i></span>
+              <span class="project-view"><span data-i18n="btn_view_project">View Project</span> <i class="uil uil-arrow-right"></i></span>
             </div>
           </div>
           <div class="project-body">
@@ -423,7 +420,7 @@
               <span class="tag">Dart</span>
             </div>
             <h3 class="project-title">Product Wishlist App</h3>
-            <p class="project-desc">Intuitive wishlist management with smart product suggestions and filtering.</p>
+            <p class="project-desc" data-i18n="proj4_desc">Intuitive wishlist management with smart product suggestions and filtering.</p>
           </div>
         </div>
 
@@ -435,8 +432,8 @@
   <section class="section timeline-section" id="experience">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">Journey</span>
-        <h2 class="section-title">Experience &amp; <span class="gradient-text">Education</span></h2>
+        <span class="section-tag" data-i18n="exp_tag">Journey</span>
+        <h2 class="section-title"><span data-i18n="exp_title_1">Experience &amp; </span><span class="gradient-text" data-i18n="exp_title_2">Education</span></h2>
       </div>
       <div class="timeline">
 
@@ -445,12 +442,11 @@
           <div class="timeline-card">
             <div class="timeline-header">
               <span class="timeline-year current-badge">2026 – Present</span>
-              <span class="timeline-type work">Work</span>
+              <span class="timeline-type work" data-i18n="timeline_work">Work</span>
             </div>
-            <h3>Software Developer</h3>
+            <h3 data-i18n="exp1_title">Software Developer</h3>
             <span class="timeline-company"><i class="uil uil-building"></i> <a href="https://5sumat.com/" target="_blank" style="color: inherit; text-decoration: none;">5SUMAT company</a></span>
-            <p>Developing scalable cross-platform software solutions, collaborating with teams to build high-performance
-              mobile applications, and driving innovation through clean code architecture and modern UI patterns.</p>
+            <p data-i18n="exp1_desc">Developing scalable cross-platform software solutions, collaborating with teams to build high-performance mobile applications, and driving innovation through clean code architecture and modern UI patterns.</p>
             <div class="timeline-skills">
               <span>Flutter</span><span>Dart</span><span>REST API</span><span>Firebase</span>
             </div>
@@ -462,12 +458,11 @@
           <div class="timeline-card">
             <div class="timeline-header">
               <span class="timeline-year">2025</span>
-              <span class="timeline-type training">Training</span>
+              <span class="timeline-type training" data-i18n="timeline_training">Training</span>
             </div>
-            <h3>Flutter Development</h3>
+            <h3 data-i18n="exp2_title">Flutter Development</h3>
             <span class="timeline-company"><i class="uil uil-building"></i> SMEC Labs</span>
-            <p>Completed advanced Flutter Development training covering UI/UX Design, Firebase integration, REST API
-              consumption, and state management patterns like BLoC and Provider.</p>
+            <p data-i18n="exp2_desc">Completed advanced Flutter Development training covering UI/UX Design, Firebase integration, REST API consumption, and state management patterns like BLoC and Provider.</p>
             <div class="timeline-skills">
               <span>Flutter</span><span>Firebase</span><span>UI/UX</span>
             </div>
@@ -479,12 +474,11 @@
           <div class="timeline-card">
             <div class="timeline-header">
               <span class="timeline-year">2025</span>
-              <span class="timeline-type edu">Education</span>
+              <span class="timeline-type edu" data-i18n="timeline_edu">Education</span>
             </div>
-            <h3>BSc Computer Science</h3>
+            <h3 data-i18n="exp3_title">BSc Computer Science</h3>
             <span class="timeline-company"><i class="uil uil-university"></i> MG University</span>
-            <p>Completed Bachelor's Degree in Computer Science, building strong foundations in algorithms, data
-              structures, software engineering, and object-oriented programming principles.</p>
+            <p data-i18n="exp3_desc">Completed Bachelor\'s Degree in Computer Science, building strong foundations in algorithms, data structures, software engineering, and object-oriented programming principles.</p>
             <div class="timeline-skills">
               <span>Algorithms</span><span>Data Structures</span><span>OOP</span>
             </div>
@@ -499,9 +493,9 @@
   <section class="section contact-section" id="contact">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">Contact</span>
-        <h2 class="section-title">Let's <span class="gradient-text">Work Together</span></h2>
-        <p class="section-desc">Got a project in mind? Let's build something amazing together.</p>
+        <span class="section-tag" data-i18n="contact_tag">Contact</span>
+        <h2 class="section-title"><span data-i18n="contact_title_1">Let\'s </span><span class="gradient-text" data-i18n="contact_title_2">Work Together</span></h2>
+        <p class="section-desc" data-i18n="contact_desc">Got a project in mind? Let\'s build something amazing together.</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info-block reveal-left">
@@ -509,22 +503,22 @@
             <div class="contact-info-item">
               <div class="contact-icon"><i class="uil uil-phone"></i></div>
               <div>
-                <strong>Phone</strong>
+                <strong data-i18n="contact_phone">Phone</strong>
                 <span>+91 6235637470</span>
               </div>
             </div>
             <div class="contact-info-item">
               <div class="contact-icon"><i class="uil uil-envelope"></i></div>
               <div>
-                <strong>Email</strong>
+                <strong data-i18n="contact_email">Email</strong>
                 <a href="mailto:albertjd7470@gmail.com">albertjd7470@gmail.com</a>
               </div>
             </div>
             <div class="contact-info-item">
               <div class="contact-icon"><i class="uil uil-map-marker"></i></div>
               <div>
-                <strong>Location</strong>
-                <span>Kerala, India</span>
+                <strong data-i18n="about_loc">Location</strong>
+                <span data-i18n="about_loc_val">Kerala, India</span>
               </div>
             </div>
           </div>
@@ -554,25 +548,25 @@
           <form class="contact-form" id="contact-form">
             <div class="form-row">
               <div class="form-group">
-                <label for="contact-name">Your Name</label>
-                <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+                <label for="contact-name" data-i18n="form_name">Your Name</label>
+                <input type="text" id="contact-name" name="name" placeholder="John Doe" data-i18n-placeholder="form_name_placeholder" required>
               </div>
               <div class="form-group">
-                <label for="contact-email">Email Address</label>
-                <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+                <label for="contact-email" data-i18n="form_email">Email Address</label>
+                <input type="email" id="contact-email" name="email" placeholder="john@example.com" data-i18n-placeholder="form_email_placeholder" required>
               </div>
             </div>
             <div class="form-group">
-              <label for="contact-subject">Subject</label>
-              <input type="text" id="contact-subject" name="subject" placeholder="Project Discussion">
+              <label for="contact-subject" data-i18n="form_subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="Project Discussion" data-i18n-placeholder="form_subject_placeholder">
             </div>
             <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project..."
+              <label for="contact-message" data-i18n="form_message">Message</label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project..." data-i18n-placeholder="form_message_placeholder"
                 required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
-              <span>Send Message</span>
+              <span data-i18n="btn_send">Send Message</span>
               <i class="uil uil-message"></i>
             </button>
           </form>
@@ -588,7 +582,7 @@
         <a class="nav-logo" href="#hero">
           <span class="logo-bracket">&lt;</span>JD<span class="logo-bracket">/&gt;</span>
         </a>
-        <p class="footer-copy">© 2026 Albert JD. Built with ❤️ in Kerala, India.</p>
+        <p class="footer-copy"><span data-i18n="footer_copy">© 2026 Albert JD. Built with ❤️ in Kerala, India.</span></p>
         <div class="footer-social">
           <a href="https://www.instagram.com/albert_jd_?igsh=MW8zc3h1bGxmaXNwYg==" target="_blank"><i
               class="uil uil-instagram"></i></a>
@@ -604,6 +598,7 @@
     <i class="uil uil-arrow-up"></i>
   </button>
 
+  <script src="js/translations.js"></script>
   <script src="js/portfolio-main.js"></script>
 </body>
 

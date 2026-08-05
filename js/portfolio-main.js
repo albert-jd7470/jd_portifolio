@@ -303,4 +303,52 @@
     setTimeout(startGlitch, 600);
   }
 
+  /* ----------------------------------------------------------
+     LOCALIZATION
+  ---------------------------------------------------------- */
+  const langSwitcher = document.getElementById('lang-switcher');
+  const savedLang = localStorage.getItem('siteLang') || 'en';
+
+  function setLanguage(lang) {
+    if (!translations[lang]) return;
+    
+    // Update texts
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) {
+        el.innerHTML = translations[lang][key];
+      }
+    });
+    
+    // Update placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (translations[lang][key]) {
+        el.setAttribute('placeholder', translations[lang][key]);
+      }
+    });
+
+    // Handle RTL
+    if (lang === 'ar') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.documentElement.setAttribute('lang', 'ar');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.documentElement.setAttribute('lang', lang);
+    }
+    
+    // Persist
+    localStorage.setItem('siteLang', lang);
+    if(langSwitcher) langSwitcher.value = lang;
+  }
+
+  if (langSwitcher) {
+    langSwitcher.addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
+  }
+
+  // Initialize
+  setLanguage(savedLang);
+
 })();
