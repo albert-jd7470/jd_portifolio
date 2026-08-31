@@ -227,15 +227,29 @@
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      
+      const name = document.getElementById('contact-name').value;
+      const email = document.getElementById('contact-email').value;
+      const subject = document.getElementById('contact-subject').value;
+      const message = document.getElementById('contact-message').value;
+      
+      // Construct the WhatsApp message
+      const text = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+      const encodedText = encodeURIComponent(text);
+      const whatsappUrl = `https://wa.me/916235637470?text=${encodedText}`;
+      
       const btnSpan = submitBtn.querySelector('span');
       const btnIcon = submitBtn.querySelector('i');
 
       submitBtn.disabled = true;
-      btnSpan.textContent = 'Sending...';
+      btnSpan.textContent = 'Redirecting...';
       btnIcon.className = 'uil uil-spinner-alt';
       submitBtn.style.background = 'rgba(124,58,237,0.5)';
 
       setTimeout(() => {
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+        
         btnSpan.textContent = 'Sent Successfully!';
         btnIcon.className = 'uil uil-check-circle';
         submitBtn.style.background = 'linear-gradient(135deg, #10b981, #06b6d4)';
@@ -247,7 +261,7 @@
           btnIcon.className = 'uil uil-message';
           submitBtn.style.background = '';
         }, 3000);
-      }, 1800);
+      }, 500);
     });
   }
 
